@@ -31,21 +31,21 @@ function logo(q){
     document.getElementById("gracz1img").style.display = "inline";
 
     if(i==0){
-        robot_logo = "https://pbs.twimg.com/profile_images/1106230235320717314/9wNWIIFa_400x400.jpg";
+        robot_logo = "IMG/0.png";
     }else if(i==1){
-        robot_logo = "https://static.wikia.nocookie.net/detroit-bh/images/a/ae/Markus1.jpeg/revision/latest/scale-to-width-down/350?cb=20200801153108&path-prefix=pl";
+        robot_logo = "IMG/1.png";
     }else if(i==2){
-        robot_logo = "https://static.wikia.nocookie.net/detroit-bh/images/f/f7/Kara2.jpeg/revision/latest/scale-to-width-down/350?cb=20200730182431&path-prefix=pl";
+        robot_logo = "IMG/2.png";
     }else if(i==3){
-        robot_logo = "https://static.wikia.nocookie.net/detroit-bh/images/8/8a/831a5cb33efcbe03e2ec3f17ac395079.jpg/revision/latest/scale-to-width-down/344?cb=20190906164204&path-prefix=pl";
+        robot_logo = "IMG/3.png";
     }else if(i==4){
-        robot_logo = "https://static.wikia.nocookie.net/detroit-bh/images/d/dc/Luther.jpg/revision/latest/scale-to-width-down/350?cb=20210421173950&path-prefix=pl";
+        robot_logo = "IMG/4.png";
     }else if(i==5){
-        robot_logo = "https://static.wikia.nocookie.net/detroit-bh/images/b/bb/ALICE.jpg/revision/latest/scale-to-width-down/350?cb=20210421172435&path-prefix=pl";
+        robot_logo = "IMG/5.png";
     }else if(i==6){
-        robot_logo = "https://static.wikia.nocookie.net/detroit-become-human/images/4/43/Simon_%21.jpg/revision/latest/scale-to-width-down/350?cb=20200505094645";
+        robot_logo = "IMG/6.png";
     }else if(i==7){
-        robot_logo = "https://static.wikia.nocookie.net/detroit-bh/images/5/54/Josh.jpg/revision/latest/scale-to-width-down/350?cb=20210421173306&path-prefix=pl";
+        robot_logo = "IMG/7.png";
     }
     document.getElementById("Player2").innerHTML = robot[i];
     document.getElementById("gracz2img").setAttribute('src',  robot_logo);
