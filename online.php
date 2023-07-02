@@ -3,22 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="CSS/styl.css">
+    <link rel="stylesheet" href="CSS/styl2.css">
     <link rel="icon" type="image/png" href="ikona.png" sizes="32x32">
-    <title>Kółko i krzyżyk (BY: Xilip)</title>
+    <title>ONLINE (BY: Xilip)</title>
 </head>
 <body>
     <div id="nag">
         <div id="tryb_div">
-            <label><b>Graj z Komputerem</b></label>
-            <input type="radio" name="radio_tryb" onclick="start(1)">
-        </div>
-        <div id="tryb_div">
-            <label><b onclick="online()">Graj Online (Niedostępne)</b></label>
-        </div>
-        <div id="tryb_div">
-            <label><b>Graj z Drugim graczem</b></label>
-            <input type="radio" name="radio_tryb" onclick="start(2)">
+            <label><b>Gotowy?</b></label>
+            <input type="checkbox" value="1" onclick="start(2)">
         </div>
     </div>
 
@@ -28,14 +21,12 @@
             <img src="" id="gracz1img"><br><br><br><br><br><br><br><br><br>
             <label id="player1_nick_label" style="color: white;">Twój nick: </label><input type="text" id="player1_nick"><br><br>
             <label id="player1_logo_label" style="color: white;">Twoje logo (link URL): </label><input type="text" id="player1_logo"><br><br>
-            <button onclick="logo(1)">Zapisz</button>
+            <button onclick="logo()">Zapisz</button>
         </div>
         <div id="gracz2">
             <h1 id="Player2">GRACZ 2</h1><br>
             <img src="" id="gracz2img"><br><br><br><br><br><br><br><br><br>
-            <label id="player2_nick_label" style="color: white;">Twój nick: </label><input type="text" id="player2_nick"><br><br>
-            <label id="player2_logo_label" style="color: white;">Twoje logo (link URL): </label><input type="text" id="player2_logo"><br><br>
-            <button onclick="logo(2)">Zapisz</button>
+        
         </div>
         <h1 id="slowka">Powodzenia!</h1>
         <table id="plansza" align="center">
@@ -74,6 +65,6 @@
             </tr>
         </table>
     </div>
-    <script src="JS/index.js"></script>
+    <script src="JS/online.js"></script>
 </body>
 </html>
