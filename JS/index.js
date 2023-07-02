@@ -17,12 +17,14 @@ function logo(q){
         document.getElementById("Player1").innerHTML = document.getElementById("player1_nick").value;
         document.getElementById("gracz1img").setAttribute('src', document.getElementById("player1_logo").value);
         document.getElementById("gracz1img").style.display = "inline";
+        document.getElementById("gracz_1_guzik").disabled = true;
     }else if(q==2){
         document.getElementById("Player2").innerHTML = document.getElementById("player2_nick").value;
         document.getElementById("gracz2img").setAttribute('src',  document.getElementById("player2_logo").value);
         document.getElementById("gracz2img").style.display = "inline";
+        document.getElementById("gracz_2_guzik").disabled = true;
     }
-}else{
+}else if(tryb==1){
     var robot = ["Connor", "Markus", "Kara", "North", "Luther", "Alice", "Simeon", "Josh"]
     var i = Math.floor(Math.random() * 8);
     var robot_logo = "";
@@ -50,6 +52,8 @@ function logo(q){
     document.getElementById("Player2").innerHTML = robot[i];
     document.getElementById("gracz2img").setAttribute('src',  robot_logo);
     document.getElementById("gracz2img").style.display = "inline";
+    document.getElementById("gracz_1_guzik").disabled = true;
+    document.getElementById("gracz_2_guzik").disabled = true;
 }
 }
 
