@@ -66,6 +66,8 @@ var ruch_czerwonych = "";
 var ruchy = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 var k_ruch = 0;
 var poprzedni_ruch_dla_co_dalej_5 = "";
+let plansza = [];
+let plansza_stala = [];
 
 
 function gra(pole){
@@ -150,7 +152,21 @@ var ruch_5_dla_x;
 var ruch_4_puste_1;
 var ruch_4_puste_2;
 
+var ile_x = 0;
+var ile_o = 0;
+var ile_puste = 0;
+
 function kasuj(){
+
+    
+
+
+
+
+
+
+
+
     document.getElementById("slowka").innerHTML = "Easter egg";
     document.getElementById("slowka").style.color = "transparent";
     czyMoznaGrac = true;
@@ -1445,7 +1461,14 @@ function kasuj(){
                                         document.getElementById("td_"+ruch_4_puste_2).setAttribute('src', o);
                                         console.log("b");
                                         return;
-                                }
+                                }else{
+                                    var random_na_koniec = Math.floor(Math.random() * 2) + 1;
+                        if(random_na_koniec == 1){
+                            document.getElementById("td_"+ruch_4_puste_1).setAttribute("src", o);
+                        }else{
+                            document.getElementById("td_"+ruch_4_puste_2).setAttribute("src", o);
+                        }
+                                   }
                             }
                            }
                        }else if(ruch_4_puste_1 %2 == 0){
@@ -1471,7 +1494,14 @@ function kasuj(){
                                         document.getElementById("td_"+ruch_4_puste_2).setAttribute('src', o);
                                         console.log("b");
                                         return;
-                                }
+                                }else{
+                                    var random_na_koniec = Math.floor(Math.random() * 2) + 1;
+                        if(random_na_koniec == 1){
+                            document.getElementById("td_"+ruch_4_puste_1).setAttribute("src", o);
+                        }else{
+                            document.getElementById("td_"+ruch_4_puste_2).setAttribute("src", o);
+                        }
+                                   }
                             }
                            }
                        }else if(ruch_4_puste_2 %2 != 0){
@@ -1609,6 +1639,7 @@ function kasuj(){
                 //To juz koniec
                 ruch_5_dla_x = ruch_czerwonych
             }
+
         /*
     if(document.getElementById("td_5").getAttribute('src') === ""){
         document.getElementById("td_5").setAttribute('src', o);
@@ -1646,7 +1677,97 @@ function kasuj(){
             }
         }*/
     
-    setTimeout(test, 10);
+ile_x = 0;
+ile_o = 0;
+ile_puste = 0;
+
+    for(var i=1;i<=9;i++){
+        if(document.getElementById("td_"+i).getAttribute("src") === x){
+            ile_x += 1;
+        }else if(document.getElementById("td_"+i).getAttribute("src") === o){
+            ile_o += 1;
+        }else{
+            ile_puste += 1;
+        }
+        
+    }
+
+    console.log(ile_puste+" "+ile_x);
+
+    if(k_ruch == 1){
+        if(ile_puste != 7 || ile_x != 1){
+            alert("UWAGA! PROGRAM WYKRYŁ OSZUSTWO!");
+            var wszystko = document.querySelectorAll('*');
+    for (var i = 0; i < wszystko.length; i++) {
+        wszystko[i].onclick = null;
+        wszystko[i].onchange = null;
+    }
+    setTimeout(ruch_1, 1000);
+    setTimeout(ruch_2, 2000);
+    setTimeout(ruch_3, 3000);
+    setTimeout(ruch_1, 1000);
+    setTimeout(ruch_2, 2000);
+    setTimeout(ruch_3, 3000);
+        }else{
+            setTimeout(test, 10);
+        }
+    }else if(k_ruch == 2){
+        if(ile_puste != 5 || ile_x != 2){
+            alert("UWAGA! PROGRAM WYKRYŁ OSZUSTWO!");
+            var wszystko = document.querySelectorAll('*');
+    for (var i = 0; i < wszystko.length; i++) {
+        wszystko[i].onclick = null;
+        wszystko[i].onchange = null;
+    }
+    setTimeout(ruch_1, 1000);
+    setTimeout(ruch_2, 2000);
+    setTimeout(ruch_3, 3000);
+        }else{
+            setTimeout(test, 10);
+        }
+    }else if(k_ruch == 3){
+        if(ile_puste != 3 || ile_x != 3){
+            alert("UWAGA! PROGRAM WYKRYŁ OSZUSTWO!");
+            var wszystko = document.querySelectorAll('*');
+    for (var i = 0; i < wszystko.length; i++) {
+        wszystko[i].onclick = null;
+        wszystko[i].onchange = null;
+    }
+    setTimeout(ruch_1, 1000);
+    setTimeout(ruch_2, 2000);
+    setTimeout(ruch_3, 3000);
+        }else{
+            setTimeout(test, 10);
+        }
+    }else if(k_ruch == 4){
+        if(ile_puste != 1 || ile_x != 4){
+            alert("UWAGA! PROGRAM WYKRYŁ OSZUSTWO!");
+            var wszystko = document.querySelectorAll('*');
+    for (var i = 0; i < wszystko.length; i++) {
+        wszystko[i].onclick = null;
+        wszystko[i].onchange = null;
+    }
+    setTimeout(ruch_1, 1000);
+    setTimeout(ruch_2, 2000);
+    setTimeout(ruch_3, 3000);
+        }else{
+            setTimeout(test, 10);
+        }
+    }else if(k_ruch == 5){
+        if(ile_puste != 0 || ile_x != 5){
+            alert("UWAGA! PROGRAM WYKRYŁ OSZUSTWO!");
+            var wszystko = document.querySelectorAll('*');
+    for (var i = 0; i < wszystko.length; i++) {
+        wszystko[i].onclick = null;
+        wszystko[i].onchange = null;
+    }
+    setTimeout(ruch_1, 1000);
+    setTimeout(ruch_2, 2000);
+    setTimeout(ruch_3, 3000);
+        }else{
+            setTimeout(test, 10);
+        }
+    }
 }
 
 
@@ -1755,7 +1876,6 @@ function guzik(){
     if(guzik_check === null){
         document.body.innerHTML += "<center><button id='guzior_JEST' onclick='location.reload()' style='margin-top: 20px;'>RESET GRY</button>";  
     }
-
 }
 /*
 
@@ -1918,4 +2038,14 @@ document.getElementById("td_9").getAttribute("src");
 */
 function online(){
     window.open("online.html");
+}
+function ruch_1(){
+    document.getElementById("td_2").setAttribute("src", o);
+}
+function ruch_2(){
+    document.getElementById("td_5").setAttribute("src", o);
+}
+function ruch_3(){
+    document.getElementById("td_8").setAttribute("src", o);
+    setTimeout(test, 10);
 }
