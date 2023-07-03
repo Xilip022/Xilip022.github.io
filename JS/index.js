@@ -293,6 +293,33 @@ function kasuj(){
                         }
                     }
                 }else{
+                    //srodek = O
+                    if(document.getElementById("td_2").getAttribute("src") === x){
+
+                            if(document.getElementById("td_1").getAttribute("src") === ""){
+                                document.getElementById("td_1").setAttribute("src", o);
+                                ruch_2_dla_5 = 1;
+                                return;
+                            }
+                        }else if(document.getElementById("td_4").getAttribute("src") === x){
+                            if(document.getElementById("td_7").getAttribute("src") === ""){
+                                document.getElementById("td_7").setAttribute("src", o);
+                                ruch_2_dla_5 = 7;
+                                return;
+                            }
+                        }else if(document.getElementById("td_6").getAttribute("src") === x){
+                            if(document.getElementById("td_3").getAttribute("src") === ""){
+                                document.getElementById("td_3").setAttribute("src", o);
+                                ruch_2_dla_5 = 3;
+                                return;
+                            }
+                        }else if(document.getElementById("td_8").getAttribute("src") === x){
+                            if(document.getElementById("td_9").getAttribute("src") === ""){
+                                document.getElementById("td_9").setAttribute("src", o);
+                                ruch_2_dla_5 = 9;
+                                return;
+                            }
+                        }else{
                     
                     switch(ruch_czerwonych){
                             case 1:
@@ -803,7 +830,9 @@ function kasuj(){
                                 }
                         break;
                     }
-                }
+                
+            }
+            }
             }else if(k_ruch == 3){
                 for(let i=0;i<1;i++){
 
@@ -1138,6 +1167,7 @@ function kasuj(){
                             }
                         }
                         if(document.getElementById("td_7").getAttribute("src") === x){
+                        
                             setTimeout(test, 10);
                             if(document.getElementById("td_8").getAttribute("src") === x && document.getElementById("td_9").getAttribute("src") === ""){
                                 document.getElementById("td_9").setAttribute("src", o); return;
@@ -1193,6 +1223,111 @@ function kasuj(){
                     }
                 }
             }else if(k_ruch == 4){
+
+                if(document.getElementById("td_1").getAttribute('src') === document.getElementById("td_2").getAttribute('src') && document.getElementById("td_1").getAttribute('src') === document.getElementById("td_3").getAttribute('src') && document.getElementById("td_1").getAttribute('src') !== "" && document.getElementById("td_2").getAttribute('src') !== "" && document.getElementById("td_3").getAttribute('src') !== ""){
+                    if(document.getElementById("td_1").getAttribute('src') === o){
+                        document.getElementById("slowka").innerHTML = "KONIEC! Wygrywają kółka!";
+                        document.getElementById("slowka").style.color = "white";
+                        koniec();
+                        return;
+                    }else{
+                        document.getElementById("slowka").innerHTML = "KONIEC! Wygrywają krzyżyki!";
+                        document.getElementById("slowka").style.color = "white";
+                        koniec();
+                        return;
+            }
+                }else if(document.getElementById("td_4").getAttribute('src') === document.getElementById("td_5").getAttribute('src') && document.getElementById("td_4").getAttribute('src') === document.getElementById("td_6").getAttribute('src') && document.getElementById("td_4").getAttribute('src') !== "" && document.getElementById("td_5").getAttribute('src') !== "" && document.getElementById("td_6").getAttribute('src') !== ""){
+                    if(document.getElementById("td_4").getAttribute('src') === o){
+                        document.getElementById("slowka").innerHTML = "KONIEC! Wygrywają kółka!";
+                        document.getElementById("slowka").style.color = "white";
+                        koniec();
+                        return;
+                    }else{
+                        document.getElementById("slowka").innerHTML = "KONIEC! Wygrywają krzyżyki!";
+                        document.getElementById("slowka").style.color = "white";
+                        koniec();
+                        return;
+            }
+                }else if(document.getElementById("td_7").getAttribute('src') === document.getElementById("td_8").getAttribute('src') && document.getElementById("td_7").getAttribute('src') === document.getElementById("td_9").getAttribute('src') && document.getElementById("td_7").getAttribute('src') !== "" && document.getElementById("td_8").getAttribute('src') !== "" && document.getElementById("td_9").getAttribute('src') !== ""){
+                    if(document.getElementById("td_7").getAttribute('src') === o){
+                        document.getElementById("slowka").innerHTML = "KONIEC! Wygrywają kółka!";
+                        document.getElementById("slowka").style.color = "white";
+                        koniec();
+                        return;
+                    }else{
+                        document.getElementById("slowka").innerHTML = "KONIEC! Wygrywają krzyżyki!";
+                        document.getElementById("slowka").style.color = "white";
+                        koniec();
+                        return;
+            }
+                }else if(document.getElementById("td_1").getAttribute('src') === document.getElementById("td_4").getAttribute('src') && document.getElementById("td_1").getAttribute('src') === document.getElementById("td_7").getAttribute('src') && document.getElementById("td_1").getAttribute('src') !== "" && document.getElementById("td_4").getAttribute('src') !== "" && document.getElementById("td_7").getAttribute('src') !== ""){
+                    if(document.getElementById("td_1").getAttribute('src') === o){
+                        document.getElementById("slowka").innerHTML = "KONIEC! Wygrywają kółka!";
+                        document.getElementById("slowka").style.color = "white";
+                        koniec();
+                        return;
+                    }else{
+                        document.getElementById("slowka").innerHTML = "KONIEC! Wygrywają krzyżyki!";
+                        document.getElementById("slowka").style.color = "white";
+                        koniec();
+                        return;
+            }
+                }else if(document.getElementById("td_2").getAttribute('src') === document.getElementById("td_5").getAttribute('src') && document.getElementById("td_2").getAttribute('src') === document.getElementById("td_8").getAttribute('src') && document.getElementById("td_2").getAttribute('src') !== "" && document.getElementById("td_5").getAttribute('src') !== "" && document.getElementById("td_8").getAttribute('src') !== ""){
+                    if(document.getElementById("td_2").getAttribute('src') === o){
+                        document.getElementById("slowka").innerHTML = "KONIEC! Wygrywają kółka!";
+                        document.getElementById("slowka").style.color = "white";
+                        koniec();
+                        return;
+                    }else{
+                        document.getElementById("slowka").innerHTML = "KONIEC! Wygrywają krzyżyki!";
+                        document.getElementById("slowka").style.color = "white";
+                        koniec();
+                        return;
+            }
+                }else if(document.getElementById("td_3").getAttribute('src') === document.getElementById("td_6").getAttribute('src') && document.getElementById("td_3").getAttribute('src') === document.getElementById("td_9").getAttribute('src') && document.getElementById("td_3").getAttribute('src') !== "" && document.getElementById("td_6").getAttribute('src') !== "" && document.getElementById("td_9").getAttribute('src') !== ""){
+                    if(document.getElementById("td_3").getAttribute('src') === o){
+                        document.getElementById("slowka").innerHTML = "KONIEC! Wygrywają kółka!";
+                        document.getElementById("slowka").style.color = "white";
+                        koniec();
+                        return;
+                    }else{
+                        document.getElementById("slowka").innerHTML = "KONIEC! Wygrywają krzyżyki!";
+                        document.getElementById("slowka").style.color = "white";
+                        koniec();
+                        return;
+            }
+                }else if(document.getElementById("td_1").getAttribute('src') === document.getElementById("td_5").getAttribute('src') && document.getElementById("td_1").getAttribute('src') === document.getElementById("td_9").getAttribute('src') && document.getElementById("td_1").getAttribute('src') !== "" && document.getElementById("td_5").getAttribute('src') !== "" && document.getElementById("td_9").getAttribute('src') !== ""){
+                    if(document.getElementById("td_1").getAttribute('src') === o){
+                        document.getElementById("slowka").innerHTML = "KONIEC! Wygrywają kółka!";
+                        document.getElementById("slowka").style.color = "white";
+                        koniec();
+                        return;
+                    }else{
+                        document.getElementById("slowka").innerHTML = "KONIEC! Wygrywają krzyżyki!";
+                        document.getElementById("slowka").style.color = "white";
+                        koniec();
+                        return;
+            }
+                }else if(document.getElementById("td_3").getAttribute('src') === document.getElementById("td_5").getAttribute('src') && document.getElementById("td_3").getAttribute('src') === document.getElementById("td_7").getAttribute('src') && document.getElementById("td_3").getAttribute('src') !== "" && document.getElementById("td_5").getAttribute('src') !== "" && document.getElementById("td_7").getAttribute('src') !== ""){
+                    if(document.getElementById("td_3").getAttribute('src') === o){
+                        document.getElementById("slowka").innerHTML = "KONIEC! Wygrywają kółka!";
+                        document.getElementById("slowka").style.color = "white";
+                        koniec();
+                        return;
+                    }else{
+                        document.getElementById("slowka").innerHTML = "KONIEC! Wygrywają krzyżyki!";
+                        document.getElementById("slowka").style.color = "white";
+                        koniec();
+                        return;
+                    }
+                }else if(document.getElementById("td_2").getAttribute('src') !== "" && document.getElementById("td_3").getAttribute('src') !== "" && document.getElementById("td_4").getAttribute('src') !== "" && document.getElementById("td_5").getAttribute('src') !== "" && document.getElementById("td_6").getAttribute('src') !== "" && document.getElementById("td_7").getAttribute('src') !== "" && document.getElementById("td_8").getAttribute('src') !== "" && document.getElementById("td_9").getAttribute('src') !== "" && document.getElementById("td_1").getAttribute('src') !== ""){
+                        document.getElementById("slowka").innerHTML = "KONIEC! REMIS!";
+                        document.getElementById("slowka").style.color = "white";
+                        koniec();
+                        return;
+                }
+            
+
                 for(let i=0;i<1;i++){
 
                     if(document.getElementById("td_1").getAttribute("src") === o){
